@@ -24,12 +24,14 @@ function handleGetData(event){
         }
       );
 }
+
 function render(){
     $weatherFor.text(weatherData.name);
     $temp.text(weatherData.main.temp);
     $feels_like.text(weatherData.main.feels_like);
     $weather.text(weatherData.weather[0].description);
 }
+
 
 $('form').on('submit', handleGetData)
 
