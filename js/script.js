@@ -25,13 +25,6 @@ function handleGetData(event){
         }
       );
 }
-
-function render(){
-    $weatherFor.text(weatherData.name);
-    $temp.text(weatherData.main.temp);
-    $feels_like.text(weatherData.main.feels_like);
-    $weather.text(weatherData.weather[0].description);
-}
 function handleGetData2(event){
     event.preventDefault();
     console.log("Form Submitted")
@@ -41,7 +34,7 @@ function handleGetData2(event){
         function(data){
          console.log(data); 
          weatherData = data;
-         render2(); 
+         render(); 
          $input2.val("") 
         },
         function(error){
@@ -49,13 +42,13 @@ function handleGetData2(event){
         }
       );
 }
-
-function render2(){
+function render(){
     $weatherFor.text(weatherData.name);
     $temp.text(weatherData.main.temp);
     $feels_like.text(weatherData.main.feels_like);
     $weather.text(weatherData.weather[0].description);
 }
+
 
 $('#form1').on('submit', handleGetData)
 $('#form2').on('submit', handleGetData2)
