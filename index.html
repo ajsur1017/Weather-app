@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,39 +15,108 @@
         background-image: url("https://t3.ftcdn.net/jpg/02/11/52/42/360_F_211524227_Ett8aboQvVnROAFtqu3S1pW99Y3Th9vm.jpg");
         border-radius: 20px;
     }
+
     h1 {
-        font-size: 70px;
+        display: flex;
+        justify-content: space-evenly;
+        font-size: 45px;
         text-align: center;
         background: rgb(190, 197, 229);
-        margin: 2px 350px 2px 350px;
-        border-radius: 20px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
         opacity: 70%;
+        margin: 0px;
     }
+
     p {
-        font-size: 40px;
+        display: flex;
+        justify-content: center;
+        font-size: 25px;
         text-align: center;
         background: rgb(190, 197, 229);
-        margin: 2px 300px 0px 300px;
         border-radius: 10px;
         opacity: 70%;
     }
+
     #button {
         text-align: center;
-        margin: 2px;   
+        margin: 2px;
     }
-    
+
+    header {
+        display: flex;
+        justify-content: space-around;
+        background-color: rgb(148, 148, 160);
+        font-size: 20px;
+        border-radius: 20px;
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-around;
+        background-color: rgb(148, 148, 160);
+        font-size: 20px;
+        border-radius: 20px;
+    }
+
+    #selector {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        background-color: rgb(190, 197, 229);
+        opacity: 100%;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+
+    }
 </style>
+
 <body>
+    <header>
+        <span id="header1">1</span>
+        <span id="header2">2</span>
+        <span id="header3">3</span>
+    </header>
     <main>
         <h1>AJAX Weather Lab</h1>
         <p>Weather For: <span id="weatherFor"></span></p>
         <p>Temperature: <span id="temp"></span></p>
         <p>Feels Like: <span id="feelsLike"></span></p>
         <p>Weather: <span id="weather"></span></p>
-        <form>
-            <div id="button"><input type="text" placeholder="City Name"/>
-            <input type="submit" value="Get Weather Info"/></div>
-          </form>
+        <form id="form1">
+            <div id="button"><input type="text" placeholder="City Name" />
+                <input type="submit" value="Get Weather Info" />
+
+            </div>
+        </form>
+ 
+        <form id="form2">
+        <div id="selector">
+            <label>Or pick a city:</label>
+            <select id="city">
+                <option value="default" placeholder="City Name"></option>
+                <option value="New York">New York</option>
+                <option value="Los Angeles">Los Angeles</option>
+                <option value="Chicago">Chicago</option>
+                <option value="Houston">Houston</option>
+                <option value="Pheonix">Pheonix</option>
+                <option value="Philadelphia">Philadelphia</option>
+                <option value="San Antonio">San Antonio</option>
+                <option value="San Diego">San Diego</option>
+                <option value="Dallas">Dallas</option>
+                <option value="San Jose">San Jose</option>
+                <input type="submit" value="Check Your City">
+            </select>
+        </div>
+        </form>
+
+
     </main>
+    <footer>
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+    </footer>
 </body>
+
 </html>
